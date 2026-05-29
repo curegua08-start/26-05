@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+ {% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batman — Guardián de Gotham</title>
+  <meta name="description" content="Página temática de Batman: explora Gotham, el Caballero Oscuro y su legado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="{% static 'src/logo.png' %}" alt="" class="brand-logo" />
+        <span class="brand-text">GOTHAM</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#origen">Origen</a></li>
+        <li><a href="#villanos">Villanos</a></li>
+        <li><a href="#arsenal">Arsenal</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="{% static 'src/b.png' %}" alt="Bat-Señal sobre Gotham" class="hero-bg" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow flicker">YO SOY LA NOCHE</p>
+      <h1 class="hero-title text-glow">BAT<span class="accent">MAN</span></h1>
+      <p class="hero-sub">El Caballero Oscuro. El protector silencioso de Gotham City. Donde la justicia falla, él aparece.</p>
+      <div class="hero-cta">
+        <a href="#origen" class="btn btn-primary">CONOCER LA LEYENDA</a>
+        <a href="#villanos" class="btn btn-ghost">VILLANOS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIGEN -->
+  <section id="origen" class="section">
+    <div class="grid-2">
+      <div>
+        <p class="eyebrow">EL ORIGEN</p>
+        <h2 class="h2">DE LAS SOMBRAS<br/>NACE UN HÉROE</h2>
+        <p class="muted">Bruce Wayne, heredero del imperio Wayne, presenció el asesinato de sus padres en un callejón de Gotham siendo apenas un niño. Esa noche, un juramento nació en su corazón: nadie volvería a sufrir como él.</p>
+        <p class="muted">Tras años de entrenamiento alrededor del mundo, regresó como un símbolo que el crimen aprendería a temer: <span class="accent">el murciélago</span>.</p>
+      </div>
+      <div class="img-frame">
+        <img src="{% static 'src/a.png' %}" alt="Batman sobre Gotham" />
+      </div>
+    </div>
+  </section>
+
+  <!-- VILLANOS -->
+  <section id="villanos" class="section section-alt">
+    <p class="eyebrow center">GALERÍA DE VILLANOS</p>
+    <h2 class="h2 center">ENEMIGOS LEGENDARIOS</h2>
+    <div class="villains">
+      <article class="villain"><span class="bar"></span><h3>El Joker</h3><p>El príncipe payaso del crimen. Caos puro.</p></article>
+      <article class="villain"><span class="bar"></span><h3>Bane</h3><p>El hombre que rompió la espalda del murciélago.</p></article>
+      <article class="villain"><span class="bar"></span><h3>Enigma</h3><p>Acertijos mortales que desafían tu mente.</p></article>
+      <article class="villain"><span class="bar"></span><h3>Pingüino</h3><p>El señor del bajo mundo de Gotham.</p></article>
+    </div>
+  </section>
+
+  <!-- ARSENAL -->
+  <section id="arsenal" class="section center">
+    <img src="{% static 'src/bat-logo.png' %}" alt="" class="arsenal-logo bat-fly" />
+    <p class="eyebrow">ARSENAL</p>
+    <h2 class="h2">HERRAMIENTAS DEL CABALLERO</h2>
+    <div class="arsenal">
+      <div class="tool"><h3>Batimóvil</h3><p>Vehículo blindado capaz de atravesar cualquier obstáculo en Gotham.</p></div>
+      <div class="tool"><h3>Batarang</h3><p>Arma arrojadiza en forma de murciélago. Precisa, silenciosa, letal.</p></div>
+      <div class="tool"><h3>Cinturón</h3><p>Gadgets para cada situación: gas lacrimógeno, ganchos, explosivos.</p></div>
+    </div>
+  </section>
+
+  <footer class="footer">GOTHAM NUNCA DUERME · FAN SITE TEMÁTICO</footer>
+
+</body>
+</html>

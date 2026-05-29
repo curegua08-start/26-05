@@ -1,0 +1,90 @@
+:root{
+  --bg:#0a0a0f;
+  --bg-2:#12121a;
+  --fg:#e7e7ea;
+  --muted:#8a8a95;
+  --primary:#f5c518;
+  --primary-soft:rgba(245,197,24,.5);
+  --border:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;line-height:1.5;scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* Tipografía display */
+.h2,.hero-title,.brand-text,.eyebrow,.hero-eyebrow,.btn,.villain h3,.tool h3,.footer{
+  font-family:'Cinzel',serif;letter-spacing:.2em;
+}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(10px);background:rgba(10,10,15,.6);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:.75rem}
+.brand-logo{height:32px;filter:invert(85%) sepia(60%) saturate(600%) hue-rotate(5deg)}
+.brand-text{color:var(--primary);letter-spacing:.3em;font-size:1.1rem}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:var(--primary)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center;padding:0 1.5rem}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.4),rgba(10,10,15,.2),var(--bg))}
+.hero-content{position:relative;z-index:2}
+.hero-eyebrow{color:var(--primary-soft);font-size:.85rem;letter-spacing:.5em;margin-bottom:1.5rem}
+.hero-title{font-size:clamp(4rem,15vw,12rem);line-height:1;font-weight:800}
+.accent{color:var(--primary)}
+.text-glow{text-shadow:0 0 30px rgba(245,197,24,.3),0 0 60px rgba(245,197,24,.15)}
+.hero-sub{margin:2rem auto 0;max-width:560px;color:var(--muted);font-size:1.1rem}
+.hero-cta{margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* Botones */
+.btn{padding:.85rem 2rem;font-size:.85rem;cursor:pointer;transition:transform .3s,background .3s;display:inline-block}
+.btn-primary{background:var(--primary);color:#0a0a0f}
+.btn-primary:hover{transform:scale(1.05)}
+.btn-ghost{border:1px solid var(--primary-soft);color:var(--primary)}
+.btn-ghost:hover{background:rgba(245,197,24,.1)}
+
+/* Secciones */
+.section{padding:8rem 1.5rem;max-width:1200px;margin:0 auto}
+.section-alt{max-width:none;background:rgba(255,255,255,.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.section-alt>*{max-width:1200px;margin-left:auto;margin-right:auto}
+.center{text-align:center}
+.eyebrow{color:var(--primary);font-size:.8rem;letter-spacing:.4em;margin-bottom:1rem}
+.h2{font-size:clamp(2.5rem,6vw,4.5rem);margin-bottom:2rem;line-height:1.05}
+.muted{color:var(--muted);margin-bottom:1rem}
+
+.grid-2{display:grid;grid-template-columns:1fr;gap:4rem;align-items:center}
+@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
+.img-frame{position:relative}
+.img-frame img{width:100%;border-radius:2px;box-shadow:0 25px 50px -12px rgba(245,197,24,.1)}
+.img-frame::after{content:"";position:absolute;inset:auto -1.5rem -1.5rem auto;width:100%;height:100%;border:1px solid var(--primary-soft);border-radius:2px;z-index:-1}
+
+/* Villanos */
+.villains{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:4rem}
+@media(min-width:640px){.villains{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.villains{grid-template-columns:repeat(4,1fr)}}
+.villain{position:relative;background:rgba(10,10,15,.6);border:1px solid var(--border);padding:2rem;transition:all .5s}
+.villain:hover{border-color:var(--primary-soft);transform:translateY(-8px)}
+.villain .bar{position:absolute;top:0;left:0;width:48px;height:4px;background:var(--primary)}
+.villain h3{font-size:1.6rem;margin-bottom:.75rem;transition:color .3s}
+.villain:hover h3{color:var(--primary)}
+.villain p{color:var(--muted);font-size:.9rem}
+
+/* Arsenal */
+.arsenal-logo{height:128px;margin:0 auto 3rem;filter:invert(85%) sepia(60%) saturate(600%) hue-rotate(5deg) drop-shadow(0 0 30px rgba(245,197,24,.5))}
+.arsenal{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:4rem;text-align:left}
+@media(min-width:768px){.arsenal{grid-template-columns:repeat(3,1fr)}}
+.tool{border-left:2px solid var(--primary);padding:.5rem 0 .5rem 1.5rem}
+.tool h3{color:var(--primary);font-size:1.4rem;margin-bottom:.5rem}
+.tool p{color:var(--muted);font-size:.9rem}
+
+/* Footer */
+.footer{border-top:1px solid var(--border);padding:2.5rem;text-align:center;color:var(--muted);font-size:.75rem;letter-spacing:.3em}
+
+/* Animaciones */
+@keyframes bat-fly{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-15px) rotate(2deg)}}
+.bat-fly{animation:bat-fly 6s ease-in-out infinite}
+@keyframes flicker{0%,100%{opacity:1}45%{opacity:.4}50%{opacity:.9}55%{opacity:.5}}
+.flicker{animation:flicker 4s infinite}
