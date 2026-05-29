@@ -1,7 +1,6 @@
-from django.contrib import 
 from django.urls import path
-
+from.views import*
 urlpatterns = [
-    path(),
-    
+#---> pagina ,funcion ,hipervicunlo
+    path('',Home,name="Inicio"), 
 ]
